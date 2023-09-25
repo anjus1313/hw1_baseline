@@ -21,5 +21,16 @@ public class InputValidation {
                     JOptionPane.ERROR_MESSAGE);
         }
     }
-
+    //Checks if category entered is valid
+    public static void isCategoryValid(String category){
+        switch (category.toLowerCase()){
+            case "food","travel","bills","entertainment","other":
+                break;
+            default:{
+                JOptionPane.showMessageDialog(new JFrame(), "Enter a valid category (food, travel, bills, entertainment, other)", "Dialog",
+                        JOptionPane.ERROR_MESSAGE);
+                throw new IllegalArgumentException("Invalid category");
+            }
+        }
+    }
 }

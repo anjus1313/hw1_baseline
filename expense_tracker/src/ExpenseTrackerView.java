@@ -39,6 +39,7 @@ public class ExpenseTrackerView extends JFrame {
   }
 
   public String getCategoryField() {
+    InputValidation.isCategoryValid(categoryField.getText());
     return categoryField.getText();
   }
 
